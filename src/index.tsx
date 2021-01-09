@@ -1,4 +1,13 @@
-import {App} from '@app/components';
+import {Provider} from 'react-redux';
+import Router from './routes/router';
+import {configureStore} from '@app/helper';
 import {render} from 'react-dom';
 
-render(<App />, document.getElementById('content'));
+const store = configureStore();
+
+render(
+    <Provider store={store}>
+        <Router />
+    </Provider>,
+    document.getElementById('content'),
+);

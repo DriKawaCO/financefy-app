@@ -13,6 +13,9 @@ const devConfig = {
     compress: true,
     stats: "errors-only",
     overlay: true,
+    progress: true,
+    historyApiFallback: true,
+    publicPath: '/'
   }
 };
 
