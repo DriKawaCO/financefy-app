@@ -10,7 +10,12 @@ const config = {
     filename: "[name].bundle.js",
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    alias: {
+      '@app/components': path.resolve(__dirname, '../src/components/index.ts'),
+      '@app/helper': path.resolve(__dirname, '../src/helper/index.ts'),
+      '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.ts')
+    }
   },
   module: {
     rules: [

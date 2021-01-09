@@ -9,7 +9,13 @@
     "allowJs": true,
     "skipLibCheck": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@app/components": ["src/components/index.ts"],
+      "@app/helper": ["src/helper/index.ts"],
+      "@app/interfaces": ["src/interfaces/index.ts"]
+    }
   },
   "include": ["./src/**/**/*"]
 }
