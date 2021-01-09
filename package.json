@@ -1,0 +1,49 @@
+{
+  "name": "@drikawa/financefy-app",
+  "version": "0.1.0",
+  "description": "Financefy APP",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack/dev.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DriKawaCO/financefy-app.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "@drikawa",
+  "contributors": [
+    "@alanaugustodias",
+    "@kawassaki"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DriKawaCO/financefy-app/issues"
+  },
+  "homepage": "https://github.com/DriKawaCO/financefy-app#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^4.5.1",
+    "terser-webpack-plugin": "^5.1.0",
+    "typescript": "^4.1.3",
+    "webpack": "^5.12.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
