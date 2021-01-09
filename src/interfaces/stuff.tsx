@@ -1,5 +1,5 @@
 export interface Stuff {
-  id: string;
-  years: number;
-  name?: string;
+    id: string;
+    years: number;
+    name?: string;
 }

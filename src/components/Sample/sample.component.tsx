@@ -1,13 +1,17 @@
 import {SampleStyle} from './style';
-import {Stuff} from "@app/interfaces";
-import { WithChildren } from "@app/helper";
+import {Stuff} from '@app/interfaces';
+import {WithChildren} from '@app/helper';
 
 function Sample({children, ...stuff}: SampleProps) {
-  const getKeys = () => Object.entries(stuff);
-  return (<SampleStyle>
-    {getKeys().map(([key, value]) => <span key={key}>{`${key} - ${value}`}</span>)}
-    {children}
-  </SampleStyle>);
+    const getKeys = () => Object.entries(stuff);
+    return (
+        <SampleStyle>
+            {getKeys().map(([key, value]) => (
+                <span key={key}>{`${key} - ${value}`}</span>
+            ))}
+            {children}
+        </SampleStyle>
+    );
 }
 
 export type SampleProps = WithChildren<Stuff>;
@@ -16,7 +20,7 @@ export type SampleProps = WithChildren<Stuff>;
  * Default Props Sample
  */
 Sample.defaultProps = {
-  name: 'ALAN'
+    name: 'ALAN',
 };
 
 export default Sample;
