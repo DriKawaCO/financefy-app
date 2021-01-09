@@ -1,7 +1,8 @@
+import {ReactElement} from 'react';
 import {Sample} from '@app/components';
 import {Stuff} from '@app/interfaces';
 
-function App() {
+function App(): ReactElement {
     const newStuff: Stuff = {
         id: '123',
         years: 22,

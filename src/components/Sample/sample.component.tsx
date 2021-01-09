@@ -1,8 +1,9 @@
+import {ReactElement} from 'react';
 import {SampleStyle} from './style';
 import {Stuff} from '@app/interfaces';
 import {WithChildren} from '@app/helper';
 
-function Sample({children, ...stuff}: SampleProps) {
+function Sample({children, ...stuff}: SampleProps): ReactElement {
     const getKeys = () => Object.entries(stuff);
     return (
         <SampleStyle>
