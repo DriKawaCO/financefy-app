@@ -12,9 +12,9 @@ const config = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
     alias: {
-      '@app/components': path.resolve(__dirname, '../src/components/index.ts'),
-      '@app/helper': path.resolve(__dirname, '../src/helper/index.ts'),
-      '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.ts')
+      '@app/components': path.resolve(__dirname, '../src/components/index.tsx'),
+      '@app/helper': path.resolve(__dirname, '../src/helper/index.tsx'),
+      '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.tsx')
     }
   },
   module: {

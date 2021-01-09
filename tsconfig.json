@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "module": "commonjs",
     "jsx": "react-jsx",
     "moduleResolution": "node",
@@ -8,13 +8,13 @@
     "noEmit": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "@app/components": ["src/components/index.ts"],
-      "@app/helper": ["src/helper/index.ts"],
-      "@app/interfaces": ["src/interfaces/index.ts"]
+      "@app/components": ["src/components/index.tsx"],
+      "@app/helper": ["src/helper/index.tsx"],
+      "@app/interfaces": ["src/interfaces/index.tsx"]
     }
   },
   "include": ["./src/**/**/*"]
