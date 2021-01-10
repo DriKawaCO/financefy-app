@@ -1,9 +1,9 @@
-import Login from './login.component';
+import Button from './button.component';
 import {shallow} from 'enzyme';
 
-describe('Login Component', () => {
+describe('Button Component', () => {
     it('should render basic instance', () => {
-        const wrapper = shallow(<Login />);
+        const wrapper = shallow(<Button />);
         expect(wrapper.length).toBe(1);
     });
 });

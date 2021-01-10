@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -17,6 +17,7 @@ const config = {
             '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.tsx'),
             '@app/reducers': path.resolve(__dirname, '../src/reducers/index.tsx'),
             '@app/routes': path.resolve(__dirname, '../src/routes/index.tsx'),
+            '@app/style': path.resolve(__dirname, '../src/style.tsx'),
         },
     },
     module: {
@@ -27,10 +28,10 @@ const config = {
                 use: 'babel-loader',
             },
             {
-                test: /\.(png)$/,
+                test: /\.(png|jpe?g)$/,
                 exclude: /node_modules/,
                 use: 'file-loader',
-            },
+            }
         ],
     },
     plugins: [

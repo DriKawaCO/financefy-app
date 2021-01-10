@@ -41,5 +41,6 @@ module.exports = {
         '@app/interfaces(.*)$': '<rootDir>/src/interfaces/index.tsx',
         '@app/reducers(.*)$': '<rootDir>/src/reducers/index.tsx',
         '@app/routes(.*)$': '<rootDir>/src/routes/index.tsx',
+        '@app/style(.*)$': '<rootDir>/src/style.tsx',
     },
 };

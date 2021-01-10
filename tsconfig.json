@@ -16,8 +16,10 @@
             "@app/helper": ["src/helper/index.tsx"],
             "@app/interfaces": ["src/interfaces/index.tsx"],
             "@app/reducers": ["src/reducers/index.tsx"],
-            "@app/routes": ["src/routes/index.tsx"]
-        }
+            "@app/routes": ["src/routes/index.tsx"],
+            "@app/style": ["src/style.tsx"]
+        },
+        "typeRoots": ["custom_typings", "node_modules/@types"]
     },
-    "include": ["./src/**/**/*"]
+    "include": ["./src/**/*"]
 }

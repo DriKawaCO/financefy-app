@@ -1,3 +1,5 @@
+import * as Style from './style';
+
 import {Provider} from 'react-redux';
 import {Router} from '@app/routes';
 import {configureStore} from '@app/helper';
@@ -7,6 +9,7 @@ const store = configureStore();
 
 render(
     <Provider store={store}>
+        <Style.GlobalStyle />
         <Router />
     </Provider>,
     document.getElementById('content'),
