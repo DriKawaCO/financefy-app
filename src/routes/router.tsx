@@ -1,27 +1,18 @@
 import {Route, Switch} from 'react-router';
 
-import {App} from '@app/components';
-import {ComponentType} from 'react';
+import {PageRoutes, App} from '@app/components';
 import {ConnectedRouter} from 'connected-react-router';
-import {history} from '../helper/store';
-
-const routes: {route: string; component: ComponentType}[] = [
-    {
-        route: '/',
-        component: App,
-    },
-    {
-        route: '/login',
-        component: App,
-    },
-];
+import {history} from '@app/helper';
+import {PageRoute} from '@app/interfaces';
 
 function DefaultRouter() {
     return (
         <Switch>
-            {routes.map(({route, component}) => (
-                <Route key={route} sensitive={false} path={route} component={component} />
-            ))}
+            <App>
+                {PageRoutes.map(({path, component}: PageRoute) => (
+                    <Route key={path} sensitive={false} path={path} component={component} />
+                ))}
+            </App>
         </Switch>
     );
 }

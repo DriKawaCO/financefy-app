@@ -1,5 +1,5 @@
 import {Provider} from 'react-redux';
-import Router from './routes/router';
+import {Router} from '@app/routes';
 import {configureStore} from '@app/helper';
 import {render} from 'react-dom';
 

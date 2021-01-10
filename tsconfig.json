@@ -1,21 +1,23 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "strict": true,
-    "noEmit": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "isolatedModules": false,
-    "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "@app/components": ["src/components/index.tsx"],
-      "@app/helper": ["src/helper/index.tsx"],
-      "@app/interfaces": ["src/interfaces/index.tsx"]
-    }
-  },
-  "include": ["./src/**/**/*"]
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "jsx": "react-jsx",
+        "moduleResolution": "node",
+        "strict": true,
+        "noEmit": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "isolatedModules": false,
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+            "@app/components": ["src/components/index.tsx"],
+            "@app/helper": ["src/helper/index.tsx"],
+            "@app/interfaces": ["src/interfaces/index.tsx"],
+            "@app/reducers": ["src/reducers/index.tsx"],
+            "@app/routes": ["src/routes/index.tsx"]
+        }
+    },
+    "include": ["./src/**/**/*"]
 }

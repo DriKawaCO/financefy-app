@@ -1,20 +1,12 @@
+import {WithChildren} from '@app/helper';
+import {PageRoute} from '@app/interfaces';
 import {ReactElement} from 'react';
-import {Sample} from '@app/components';
-import {Stuff} from '@app/interfaces';
+import {AppStyle} from './style';
 
-function App(): ReactElement {
-    const newStuff: Stuff = {
-        id: '123',
-        years: 22,
-    };
-
-    return (
-        <>
-            <Sample {...newStuff}>
-                <h1>Jezz Christ</h1>
-            </Sample>
-        </>
-    );
+function App({children}: AppProps): ReactElement {
+    return <AppStyle>{children}</AppStyle>;
 }
+
+type AppProps = WithChildren<{}>;
 
 export default App;

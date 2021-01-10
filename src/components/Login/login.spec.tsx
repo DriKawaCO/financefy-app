@@ -1,14 +1,14 @@
-import {Sample, SampleProps} from './';
+import {Login, LoginProps} from '.';
 
 import {shallow} from 'enzyme';
 
-describe('Sample Component', () => {
+describe('Login Component', () => {
     it('should render basic instance', () => {
-        const sampleProps: SampleProps = {
+        const loginProps: LoginProps = {
             id: '123',
             years: 22,
         };
-        const wrapper = shallow(<Sample {...sampleProps} />);
+        const wrapper = shallow(<Login {...loginProps} />);
         expect(wrapper.find('span').length).toBe(3);
     });
 });
