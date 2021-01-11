@@ -5,7 +5,6 @@ import {faFacebook, faGoogle} from '@fortawesome/free-brands-svg-icons';
 import {Button} from '@app/components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import LoginBanner from '../../assets/images/login-banner.png';
-import {PageRoute} from '@app/interfaces';
 import {ReactElement} from 'react';
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 
@@ -59,10 +58,5 @@ function Login(): ReactElement {
         </Style.LoginSection>
     );
 }
-
-export const LoginRoute: PageRoute = {
-    path: '/login',
-    component: Login,
-};
 
 export default Login;

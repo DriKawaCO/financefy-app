@@ -1,1 +1,2 @@
-export {default as Login, LoginRoute} from './login.component';
+import Login from './login.component';
+export default Login;

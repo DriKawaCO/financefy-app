@@ -1,6 +1,6 @@
 import * as Style from './style';
 
-import {ButtonHTMLAttributes, HTMLProps, ReactElement} from 'react';
+import {ButtonHTMLAttributes, ReactElement} from 'react';
 
 import {WithChildren} from '@app/helper';
 

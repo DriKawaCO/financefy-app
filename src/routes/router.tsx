@@ -1,26 +1,18 @@
-import {Route, Switch} from 'react-router';
-
-import {PageRoutes, App} from '@app/components';
+import {App} from '@app/components';
+import {AppRoutes} from '@app/routes';
 import {ConnectedRouter} from 'connected-react-router';
+import {ReactElement} from 'react';
+import {Switch} from 'react-router';
 import {history} from '@app/helper';
-import {PageRoute} from '@app/interfaces';
 
-function DefaultRouter() {
+function Router(): ReactElement {
     return (
-        <Switch>
-            <App>
-                {PageRoutes.map(({path, component}: PageRoute) => (
-                    <Route key={path} sensitive={false} path={path} component={component} />
-                ))}
-            </App>
-        </Switch>
+        <ConnectedRouter history={history}>
+            <Switch>
+                <App>{AppRoutes}</App>
+            </Switch>
+        </ConnectedRouter>
     );
 }
-
-const Router = () => (
-    <ConnectedRouter history={history}>
-        <DefaultRouter />
-    </ConnectedRouter>
-);
 
 export default Router;

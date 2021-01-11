@@ -37,6 +37,7 @@ module.exports = {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '<rootDir>/assetsTransformer.js',
         '@app/components(.*)$': '<rootDir>/src/components/index.tsx',
+        '@app/containers(.*)$': '<rootDir>/src/containers/index.tsx',
         '@app/helper(.*)$': '<rootDir>/src/helper/index.tsx',
         '@app/interfaces(.*)$': '<rootDir>/src/interfaces/index.tsx',
         '@app/reducers(.*)$': '<rootDir>/src/reducers/index.tsx',

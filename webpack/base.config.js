@@ -13,6 +13,7 @@ const config = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         alias: {
             '@app/components': path.resolve(__dirname, '../src/components/index.tsx'),
+            '@app/containers': path.resolve(__dirname, '../src/containers/index.tsx'),
             '@app/helper': path.resolve(__dirname, '../src/helper/index.tsx'),
             '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.tsx'),
             '@app/reducers': path.resolve(__dirname, '../src/reducers/index.tsx'),

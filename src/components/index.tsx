@@ -1,7 +1,5 @@
-import {LoginRoute} from './Login';
-import {PageRoute} from '@app/interfaces';
-
-export {App} from './App';
-export {Button} from './Button';
-
-export const PageRoutes: PageRoute[] = [LoginRoute];
+export {default as App} from './App';
+export {default as Button} from './Button';
+export {default as Home} from './Home';
+export {default as Login} from './Login';
+export {default as PrivateRoute} from './PrivateRoute';
