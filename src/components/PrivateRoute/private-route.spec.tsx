@@ -26,6 +26,6 @@ describe('PrivateRoute Component', () => {
     it('should render basic instance', () => {
         const wrapper = shallow(<PrivateRoute exact path="/home" component={Home} />);
         expect(wrapper.length).toBe(1);
-        expect(localStorageMock.get).toHaveBeenCalled();
+        expect(localStorageMock.getItem).toHaveBeenCalled();
     });
 });

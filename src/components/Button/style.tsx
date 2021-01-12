@@ -14,14 +14,20 @@ export const Button = styled.button`
         margin-right: 10px;
     }
 
+    &:active {
+        -webkit-box-shadow: inset -2px -2px 22px -12px ${GlobalColors.grey};
+        -moz-box-shadow: inset -2px -2px 22px -12px ${GlobalColors.grey};
+        box-shadow: inset -2px -2px 22px -12px ${GlobalColors.grey};
+    }
+
     &.default {
-        background-color: ${GlobalColors.mediumGrey};
+        background-color: ${GlobalColors.lightGrey};
         border: 1px solid ${GlobalColors.grey};
 
         &:hover,
         &:focus,
         &:active {
-            background-color: ${GlobalColors.grey};
+            background-color: ${GlobalColors.mediumGrey};
         }
     }
 
@@ -32,7 +38,7 @@ export const Button = styled.button`
         &:hover,
         &:focus,
         &:active {
-            background-color: ${GlobalColors.primaryDarker};
+            background-color: ${GlobalColors.darkPrimary};
         }
     }
 
@@ -43,7 +49,7 @@ export const Button = styled.button`
         &:hover,
         &:focus,
         &:active {
-            background-color: ${GlobalColors.successDarker};
+            background-color: ${GlobalColors.darkSuccess};
         }
     }
 
@@ -54,7 +60,7 @@ export const Button = styled.button`
         &:hover,
         &:focus,
         &:active {
-            background-color: ${GlobalColors.dangerDarker};
+            background-color: ${GlobalColors.darkDanger};
         }
     }
 
@@ -62,12 +68,24 @@ export const Button = styled.button`
         background-color: ${GlobalColors.facebook};
         color: white;
         width: 45%;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: ${GlobalColors.darkPrimary};
+        }
     }
 
     &.google {
         background-color: ${GlobalColors.google};
         color: white;
         width: 45%;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: ${GlobalColors.darkDanger};
+        }
     }
 
     &.block {

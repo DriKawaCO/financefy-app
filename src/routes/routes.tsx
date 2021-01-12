@@ -6,7 +6,7 @@ import {Route} from 'react-router';
 
 const AppRoutes: ReactElement[] = [
     <Route exact key="login" path="/login" component={Login} />,
-    <PrivateRoute exact key="home" path="/home" component={Home} />,
+    <PrivateRoute exact key="home" path="/" component={Home} />,
 ];
 
 export default AppRoutes;

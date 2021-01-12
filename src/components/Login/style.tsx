@@ -8,6 +8,17 @@ export const LoginSection = styled.section`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    background: ${GlobalColors.loginBGDark}; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        ${GlobalColors.loginBGLight},
+        ${GlobalColors.loginBGDark}
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        ${GlobalColors.loginBGLight},
+        ${GlobalColors.loginBGDark}
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 `;
 
 export const LoginFormWrapper = styled.div`
@@ -19,10 +30,6 @@ export const LoginFormWrapper = styled.div`
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 4px;
-    -webkit-box-shadow: 3px 3px 8px 0px rgba(128, 128, 128, 1);
-    -moz-box-shadow: 3px 3px 8px 0px rgba(128, 128, 128, 1);
-    box-shadow: 3px 3px 8px 0px rgba(128, 128, 128, 1);
 `;
 
 export const LoginBanner = styled.div`
@@ -72,21 +79,14 @@ export const LoginForm = styled.form`
     align-items: center;
 `;
 
-export const FormField = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-
-    &.row {
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
+export const Link = styled.a`
+    text-decoration: none;
+    color: ${GlobalColors.darkPrimary};
+    font-weight: 400;
 `;
 
-export const Input = styled.input`
-    height: 24px;
-    font-size: 1.1em;
-    padding: 4px 10px;
-    border: 1px solid ${GlobalColors.grey};
-    border-radius: 2px;
+export const Terms = styled.a`
+    font-size: 0.8em;
+    color: ${GlobalColors.grey};
+    text-decoration: none;
 `;

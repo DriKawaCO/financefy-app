@@ -10,14 +10,17 @@ export const GlobalStyle = createGlobalStyle`
 
 export const GlobalColors = {
     lightGrey: '#fbfbff',
-    mediumGrey: '#e6e6e673',
+    mediumGrey: '#cecece',
     grey: '#8f8f8f',
+    darkGrey: '#4d4d4d',
     primary: '#3d549e',
-    primaryDarker: '#24325f',
+    darkPrimary: '#24325f',
     success: '#2b804e',
-    successDarker: '#1f4730',
+    darkSuccess: '#1f4730',
     danger: '#7c3b3b',
-    dangerDarker: '#5a2f2f',
+    darkDanger: '#5a2f2f',
     facebook: '#3b589c',
     google: '#e34133',
+    loginBGLight: '#4ca1af',
+    loginBGDark: '#2c3e50',
 };
