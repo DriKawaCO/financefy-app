@@ -1,6 +1,7 @@
 import {Home} from '@app/containers';
+import {MemoryRouter} from 'react-router';
 import PrivateRoute from './private-route.component';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 
 describe('PrivateRoute Component', () => {
     let localStorageMock: Storage;
@@ -23,9 +24,33 @@ describe('PrivateRoute Component', () => {
         });
     });
 
-    it('should render basic instance', () => {
-        const wrapper = shallow(<PrivateRoute exact path="/home" component={Home} />);
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+
+    it('should render Component when Authenticated', () => {
+        jest.spyOn(localStorage, 'getItem').mockReturnValue('true');
+        const path = '/home';
+        const wrapper = mount(
+            <MemoryRouter initialEntries={[path]}>
+                <PrivateRoute path={path} component={Home} />
+            </MemoryRouter>,
+        );
         expect(wrapper.length).toBe(1);
-        expect(localStorageMock.getItem).toHaveBeenCalled();
+        expect(wrapper.exists(Home)).toBeTruthy();
+        const history: any = wrapper.find('Router').prop('history');
+        expect(history.location.pathname).toBe(path);
+    });
+
+    it('should render Redirect when Not Authenticated', () => {
+        jest.spyOn(localStorage, 'getItem').mockReturnValue(null);
+        const path = '/home';
+        const wrapper = mount(
+            <MemoryRouter initialEntries={[path]}>
+                <PrivateRoute path={path} component={Home} />
+            </MemoryRouter>,
+        );
+        const history: any = wrapper.find('Router').prop('history');
+        expect(history.location.pathname).toBe('/login');
     });
 });

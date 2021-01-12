@@ -10,8 +10,11 @@ function PrivateRoute({component: Component, ...rest}: PrivateRouteProps): React
         <Route
             {...rest}
             render={(props) => {
+                if (!isAuthenticated) {
+                    return <Redirect to={{pathname: loginPath}} />;
+                }
                 const RouteComponent = Component as React.ComponentClass<typeof props>;
-                return isAuthenticated ? <RouteComponent {...props} /> : <Redirect to={{pathname: loginPath}} />;
+                return <RouteComponent {...props} />;
             }}
         ></Route>
     );

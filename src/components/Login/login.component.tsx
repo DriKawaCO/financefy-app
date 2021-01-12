@@ -1,6 +1,6 @@
 import * as Style from './style';
 
-import {Button, FormField, Input, Row} from '@app/components';
+import {Button, FormField, Input, Link, Row} from '@app/components';
 import {faFacebook, faGoogle} from '@fortawesome/free-brands-svg-icons';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -43,7 +43,7 @@ function Login(): ReactElement {
                             </Row>
                         </FormField>
                         <FormField className="right">
-                            <Style.Link href="google.com">Forgot password</Style.Link>
+                            <Link href="google.com">Forgot password</Link>
                         </FormField>
                     </Row>
                     <Row>
@@ -62,7 +62,9 @@ function Login(): ReactElement {
                             Facebook
                         </Button>
                     </Row>
-                    <Style.Terms href="google.com">Terms and Conditions</Style.Terms>
+                    <Link className="login-terms" href="google.com">
+                        Terms and Conditions
+                    </Link>
                 </Style.LoginForm>
             </Style.LoginFormWrapper>
         </Style.LoginSection>

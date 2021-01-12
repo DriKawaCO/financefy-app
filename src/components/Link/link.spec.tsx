@@ -1,29 +1,33 @@
-import Row from './row.component';
+import Link from './link.component';
 import {shallow} from 'enzyme';
 
-describe('Row Component', () => {
+describe('Link Component', () => {
     it('should render basic instance', () => {
-        const wrapper = shallow(<Row />);
+        const linkPath = 'https://google.com';
+        const wrapper = shallow(<Link href={linkPath} />);
         expect(wrapper.length).toBe(1);
+        expect(wrapper.props().href).toBe(linkPath);
     });
 
     it('should render children', () => {
-        const text = 'Row Children';
-        const wrapper = shallow(<Row>{text}</Row>);
+        const linkPath = 'https://google.com';
+        const text = 'Google';
+        const wrapper = shallow(<Link href={linkPath}>{text}</Link>);
         expect(wrapper.length).toBe(1);
+        expect(wrapper.props().href).toBe(linkPath);
         expect(wrapper.props().children).toBe(text);
     });
 
     it('should handle className', () => {
         const className = 'test-class';
-        const wrapper = shallow(<Row className={className} />);
+        const wrapper = shallow(<Link className={className} />);
         expect(wrapper.length).toBe(1);
         expect(wrapper.hasClass(className)).toBeTruthy();
     });
 
     it('should handle click', () => {
         const onClickHandler = jest.fn();
-        const wrapper = shallow(<Row onClick={onClickHandler} />);
+        const wrapper = shallow(<Link onClick={onClickHandler} />);
         expect(wrapper.length).toBe(1);
         wrapper.simulate('click');
         expect(onClickHandler).toHaveBeenCalledTimes(1);

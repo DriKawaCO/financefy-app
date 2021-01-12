@@ -78,15 +78,3 @@ export const LoginForm = styled.form`
     justify-content: space-around;
     align-items: center;
 `;
-
-export const Link = styled.a`
-    text-decoration: none;
-    color: ${GlobalColors.darkPrimary};
-    font-weight: 400;
-`;
-
-export const Terms = styled.a`
-    font-size: 0.8em;
-    color: ${GlobalColors.grey};
-    text-decoration: none;
-`;
