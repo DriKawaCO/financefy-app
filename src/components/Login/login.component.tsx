@@ -1,14 +1,38 @@
 import * as Style from './style';
 
 import {Button, FormField, Input, Link, Row} from '@app/components';
+import {ReactElement, useEffect, useState} from 'react';
 import {faFacebook, faGoogle} from '@fortawesome/free-brands-svg-icons';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import LoginBanner from '../../assets/images/login-banner.png';
-import {ReactElement} from 'react';
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 
 function Login(): ReactElement {
+    let auth: any = null;
+    const googleLogin = () => {
+        auth.signIn().then((googleUser: any) => {
+            const profile = googleUser.getBasicProfile();
+            console.log('Token', googleUser.getAuthResponse().id_token);
+            console.log('Name:', profile.getName());
+            console.log('Image URL:', profile.getImageUrl());
+            console.log('Email:', profile.getEmail());
+        });
+    };
+
+    useEffect(() => {
+        gapi.load('auth2', () => {
+            gapi.auth2
+                .init({
+                    client_id: '361700727137-hfug5nedl1gmjkipqirohj2dh4segrjv.apps.googleusercontent.com',
+                    fetch_basic_profile: true,
+                })
+                .then((authResult) => {
+                    auth = authResult;
+                });
+        });
+    }, []);
+
     return (
         <Style.LoginSection>
             <Style.LoginFormWrapper>
@@ -53,7 +77,7 @@ function Login(): ReactElement {
                         </Button>
                     </Row>
                     <Row className="space-between">
-                        <Button className="google" type="button">
+                        <Button className="google" type="button" onClick={googleLogin}>
                             <FontAwesomeIcon icon={faGoogle} />
                             Google
                         </Button>
