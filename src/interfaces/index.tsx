@@ -1,2 +1,2 @@
-export * from './page-route';
+export * from './auth';
 export * from './stuff';

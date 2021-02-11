@@ -14,6 +14,7 @@
         "paths": {
             "@app/components": ["src/components/index.tsx"],
             "@app/containers": ["src/containers/index.tsx"],
+            "@app/custom-hooks": ["src/custom-hooks/index.tsx"],
             "@app/helper": ["src/helper/index.tsx"],
             "@app/interfaces": ["src/interfaces/index.tsx"],
             "@app/reducers": ["src/reducers/index.tsx"],

@@ -38,6 +38,7 @@ module.exports = {
             '<rootDir>/assetsTransformer.js',
         '@app/components(.*)$': '<rootDir>/src/components/index.tsx',
         '@app/containers(.*)$': '<rootDir>/src/containers/index.tsx',
+        '@app/custom-hooks(.*)$': '<rootDir>/src/custom-hooks/index.tsx',
         '@app/helper(.*)$': '<rootDir>/src/helper/index.tsx',
         '@app/interfaces(.*)$': '<rootDir>/src/interfaces/index.tsx',
         '@app/reducers(.*)$': '<rootDir>/src/reducers/index.tsx',

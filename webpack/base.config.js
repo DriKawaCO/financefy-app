@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -14,6 +14,7 @@ const config = {
         alias: {
             '@app/components': path.resolve(__dirname, '../src/components/index.tsx'),
             '@app/containers': path.resolve(__dirname, '../src/containers/index.tsx'),
+            '@app/custom-hooks': path.resolve(__dirname, '../src/custom-hooks/index.tsx'),
             '@app/helper': path.resolve(__dirname, '../src/helper/index.tsx'),
             '@app/interfaces': path.resolve(__dirname, '../src/interfaces/index.tsx'),
             '@app/reducers': path.resolve(__dirname, '../src/reducers/index.tsx'),
@@ -32,7 +33,7 @@ const config = {
                 test: /\.(png|jpe?g)$/,
                 exclude: /node_modules/,
                 use: 'file-loader',
-            }
+            },
         ],
     },
     plugins: [
@@ -43,6 +44,9 @@ const config = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
+        new webpack.DefinePlugin({
+            CONFIG: JSON.stringify(require('config')),
+        }),
     ],
 };
 
